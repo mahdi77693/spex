@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  line-height: 1.5;
+}
+:root {
+  --main-color: lightcoral;
+  --second-color: darkslateblue;
+  --main-rgb: rgb(240, 128, 128, 0.4);
+}
+body {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  margin: 15px;
+  padding: 0 15px;
+  background-color: white;
+  position: relative;
+  width: 700px;
+  border-radius: 10px;
+}
+.container img {
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+.headding {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.preparation-time {
+  background-color: var(--main-rgb);
+  padding: 20px;
+  border-radius: 10px;
+}
+.preparation-time h2 {
+  color: var(--second-color);
+}
+.ingredients {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+.ingredients h2 {
+  color: var(--second-color);
+}
+.instructions {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+.instructions h2 {
+  color: var(--second-color);
+}
+li::marker {
+  color: var(--second-color);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.nutrition {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.nutrition h2 {
+  color: var(--second-color);
+}
+.amounts-of-components {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+}
+.amounts {
+  flex-basis: 25%;
+  color: var(--second-color);
+  font-weight: bold;
+}
+.seperator:not(:last-child) {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background-color: #ccc;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+}
